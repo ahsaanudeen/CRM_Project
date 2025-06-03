@@ -33,6 +33,11 @@ public class LoginService implements LoginServiceInterface {
         return new LoginResponceDTO("User login successful!", true);
     }
 
+    
+    public LoginForm findByUsernameAndPassword(String username, String password) {
+        return loginRepo.findByUsernameAndPassword(username, password);
+    }
+
     @Override
     public LoginForm findByUsername(String username) {
         return loginRepo.findByUsername(username);
